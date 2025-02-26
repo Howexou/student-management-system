@@ -15,7 +15,27 @@ class Student {
         this.grades = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public int getAge () {
+        return age;
+    }
+
     public void addGrade(double grade) {
         grades.add(grade);
+    }
+
+    public double getAverageGrade() {
+        double sum = 0;
+        for (double grade : grades) {
+            sum += grade;
+        }
+        return sum / grades.size();
     }
 }
