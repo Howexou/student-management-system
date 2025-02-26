@@ -27,6 +27,10 @@ class Student {
         return age;
     }
 
+    public List<Double> getGrades() {
+        return grades;
+    }
+
     public void addGrade(double grade) {
         grades.add(grade);
     }
