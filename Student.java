@@ -19,16 +19,32 @@ class Student {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getStudentID() {
         return studentID;
+    }
+
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
     }
 
     public int getAge () {
         return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public List<Double> getGrades() {
         return grades;
+    }
+
+    public void setGrades(List<Double> grades) {
+        this.grades = grades;
     }
 
     public void addGrade(double grade) {
