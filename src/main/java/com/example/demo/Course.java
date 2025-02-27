@@ -3,7 +3,7 @@ package com.example.demo;
 import java.util.ArrayList;
 import java.util.List;
 
-class Course {
+public class Course {
     private String courseName;
     private String courseCode;
     private int creditHours;

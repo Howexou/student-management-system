@@ -1,6 +1,6 @@
 package com.example.demo;
 
-class UndergraduateStudent extends Student {
+public class UndergraduateStudent extends Student {
     private String undergraduate;
 
     public UndergraduateStudent(String name, String studentID, int age, String undergraduate) {

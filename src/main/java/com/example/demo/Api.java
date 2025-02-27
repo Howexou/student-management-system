@@ -12,15 +12,38 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/students")
 public class Api {
-    private List<Student> students = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
+    private final List<Course> courses = new ArrayList<>();
+    private final StudentController studentController = new StudentController();
+    private final CourseController courseController = new CourseController();
 
-    @GetMapping
+    @GetMapping("/students")
     public List<Student> getStudents() {
         return students;
+        }
+    
+
+    @PostMapping("/students")
+    public Student addStudent(@RequestBody Student student) {
+        students.add(student);
+        return student;
     }
 
-    @PostMapping
-    public void addStudent(@RequestBody Student student) {
-        students.add(student);
+    @GetMapping("/courses")
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    @PostMapping("/courses")
+    public Course addCourse(@RequestBody Course course) {
+        courses.add(course);
+        return course;
+    }
+    @PostMapping("/enroll")
+    public Enrollment enrollStudent(@RequestBody Enrollment enrollment) {
+        Student student = studentController.getStudentById(enrollment.getStudent());
+        Course course = courseController.getCourseByCode(enrollment.getCourse());
+        course.enrollStudent(student);
+        return enrollment;
     }
 }
