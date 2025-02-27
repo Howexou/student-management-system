@@ -8,6 +8,7 @@ public class Course {
     private String courseCode;
     private int creditHours;
     private List<Student> students;
+    private String id;
 
     public Course(String courseName, String courseCode, int creditHours) {
         this.courseName = courseName;
@@ -46,6 +47,14 @@ public class Course {
 
     public void setStudents(List<Student> students) {
         this.students = students;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void enrollStudent(Student student) {
