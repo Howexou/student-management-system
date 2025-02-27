@@ -9,6 +9,7 @@ public class Student {
     private String studentID;
     private int age;
     private List<Double> grades;
+    private String id;
 
     public Student(String name, String studentID, int age) {
         this.name = name;
@@ -47,6 +48,14 @@ public class Student {
 
     public void setGrades(List<Double> grades) {
         this.grades = grades;
+    }
+
+    public String getId() {
+        return id;
+    }
+    
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void addGrade(double grade) {
