@@ -50,6 +50,8 @@ class Course {
         students.add(student);
     }
 
-    
+    public List<Student> getEnrolledStudents() {
+        return students;
+    }
 }
     
