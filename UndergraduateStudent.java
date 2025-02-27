@@ -13,4 +13,13 @@ class UndergraduateStudent extends Student {
     public void setUndergraduate(String undergraduate) {
         this.undergraduate = undergraduate;
     }
+
+    @Override
+    public double getAverageGrade() {
+        double sum = 0;
+        for (double grade : getGrades()) {
+            sum += grade;
+        }
+        return sum / getGrades().size();
+    }
 }

@@ -16,4 +16,12 @@ public class GraduateStudent extends Student {
         this.graduate = graduate;
     }
 
+    @Override
+    public double getAverageGrade() {
+        double sum = 0;
+        for (double grade : getGrades()) {
+            sum += grade;
+        }
+        return sum / getGrades().size();
+    }
 }
